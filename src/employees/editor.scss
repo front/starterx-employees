@@ -1,0 +1,26 @@
+
+.wp-block-starterx-employees {
+
+  .employee {
+    &__phone, &__email {
+      .editor-rich-text {
+        display: inline-block;
+      }
+    }
+  }
+
+  div[data-type="starterx/employees-item"] {
+    width: 25%;
+    float: left;
+    margin: 0 !important;
+  }
+
+  .block-list-appender {
+    clear: both;
+  }
+  &::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}

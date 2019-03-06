@@ -1,0 +1,40 @@
+
+.wp-block-starterx-employees {
+  font-family: "poppins", Arial, sans-serif;
+
+  .employee {
+    font-size: 16px;
+    line-height: 29px;
+    p {
+      margin: 0;
+    }
+    &__image {
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    &__name {
+      margin: 10px 0 0;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 43px;
+    }
+    &__title {
+      display: inline-block;
+      margin-bottom: 12px !important;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #D6D6D6;
+    }
+    &__phone, &__email {
+      span {
+        margin-left: 4px;
+      }
+    }
+  }
+}
