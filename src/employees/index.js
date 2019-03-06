@@ -50,7 +50,7 @@ export const settings = {
   save () {
     return (
       <div>
-        <div className="row columns-4">
+        <div className="row columns-4 column-gap-medium">
           <InnerBlocks.Content />
         </div>
       </div>

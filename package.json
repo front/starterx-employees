@@ -1,13 +1,13 @@
 {
-  "name": "starterx-employees",
-  "version": "1.0.0",
-  "description": "A custom block for Gutenberg Cloud",
+  "name": "@frontkom/starterx-employees",
+  "version": "0.0.1",
+  "description": "Grid block with list of employees",
   "main": "build/index.js",
   "gutenbergCloud": {
     "js": "build/index.js",
     "css": "build/style.css",
     "screenshot": "screenshot.png",
-    "name": "Employees"
+    "name": "StarterX Employees"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
