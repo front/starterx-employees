@@ -101,14 +101,14 @@ export const settings = {
             formattingControls={ ['bold', 'italic'] }
           />
           <p className="employee__email">
-            <strong>E-post:</strong>
+            <strong>{ __('E-mail') }:</strong>
             <RichText
               tagName="span" value={ email } placeholder="person@startertheme.no"
               onChange={ value => setAttributes({ email: value }) } formattingControls={ [] }
             />
           </p>
           <p className="employee__phone">
-            <strong>Telefon:</strong>
+            <strong>{ __('Phone') }:</strong>
             <RichText
               tagName="span" value={ phone } placeholder="00 00 00 00"
               onChange={ value => setAttributes({ phone: value }) } formattingControls={ [] }
@@ -129,11 +129,11 @@ export const settings = {
         <RichText.Content tagName="h1" className="employee__name" value={ personName } />
         <RichText.Content tagName="p" className="employee__title" value={ jobTitle } />
         <p className="employee__email">
-          <strong>E-post:</strong>
+          <strong>{ __('E-mail') }:</strong>
           <RichText.Content tagName="span" value={ email } />
         </p>
         <p className="employee__phone">
-          <strong>Telefon:</strong>
+          <strong>{ __('Phone') }:</strong>
           <RichText.Content tagName="span" value={ phone } />
         </p>
       </div>
