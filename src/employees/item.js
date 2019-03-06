@@ -45,7 +45,7 @@ const BLOCK_ATTRIBUTES = {
   },
   image: {
     type: 'string',
-    default: 'http://www.fillmurray.com/g/320/320',
+    default: 'https://www.fillmurray.com/g/320/320',
   },
   imageData: {
     type: 'object',
