@@ -1,6 +1,6 @@
 {
   "name": "@frontkom/starterx-employees",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grid block with list of employees",
   "main": "build/index.js",
   "gutenbergCloud": {
