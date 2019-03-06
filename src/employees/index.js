@@ -14,6 +14,14 @@ const TEMPLATE = [
   ['starterx/employees-item'],
 ];
 
+// Editable block attributes
+const BLOCK_ATTRIBUTES = {
+  align: {
+    type: 'string',
+    default: 'wide',
+  },
+};
+
 
 export const name = 'employees';
 
@@ -21,7 +29,11 @@ export const settings = {
   title: __('Employees'),
   description: __('Grid with list of employees'),
   icon: 'businessman',
-  attributes: {},
+  attributes: BLOCK_ATTRIBUTES,
+
+  supports: {
+    align: ['wide', 'full'],
+  },
 
   edit ({ className }) {
     return (
@@ -37,7 +49,7 @@ export const settings = {
 
   save () {
     return (
-      <div className="container alignwide">
+      <div>
         <div className="row columns-4">
           <InnerBlocks.Content />
         </div>
