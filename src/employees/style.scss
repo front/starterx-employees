@@ -1,5 +1,12 @@
 
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
+
 .wp-block-starterx-employees {
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   font-family: "poppins", Arial, sans-serif;
 
   .employee {
@@ -34,6 +41,22 @@
     &__phone, &__email {
       span {
         margin-left: 4px;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+    @media (min-width: 640px) {
+      @for $i from 2 through 4 {
+        &.columns-#{$i} {
+          grid-template-columns: repeat($i, 1fr);
+        }
       }
     }
   }
