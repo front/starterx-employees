@@ -65,6 +65,9 @@ export const settings = {
 
   edit ({ attributes, setAttributes }) {
     const { personName, jobTitle, email, phone, image, imageData } = attributes;
+    const imgStyle = {
+      backgroundImage: image && `url('${image}')`,
+    };
 
     const onSelectImage = (media, field) => {
       setAttributes({
@@ -86,7 +89,7 @@ export const settings = {
             />
           </Toolbar>
         </BlockControls>
-        <figure className="employee__image">
+        <figure className="employee__image" style={ imgStyle }>
           <img src={ image } { ...imageData } />
         </figure>
         <div className="wrapper">
@@ -121,9 +124,13 @@ export const settings = {
 
   save ({ attributes }) {
     const { personName, jobTitle, email, phone, image, imageData } = attributes;
+    const imgStyle = {
+      backgroundImage: image && `url('${image}')`,
+    };
+
     return (
       <div className="employee">
-        <figure className="employee__image">
+        <figure className="employee__image" style={ imgStyle }>
           <img alt="employee img" src={ image } { ...imageData } />
         </figure>
         <RichText.Content tagName="h1" className="employee__name" value={ personName } />
