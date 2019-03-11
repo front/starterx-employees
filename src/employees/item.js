@@ -94,7 +94,7 @@ export const settings = {
         </figure>
         <div className="wrapper">
           <RichText
-            tagName="h1" className="employee__name" value={ personName } placeholder="Person's Name"
+            tagName="h3" className="employee__name" value={ personName } placeholder="Person's Name"
             onChange={ value => setAttributes({ personName: value }) }
             formattingControls={ ['bold', 'italic'] }
           />
@@ -133,7 +133,7 @@ export const settings = {
         <figure className="employee__image" style={ imgStyle }>
           <img alt="employee img" src={ image } { ...imageData } />
         </figure>
-        <RichText.Content tagName="h1" className="employee__name" value={ personName } />
+        <RichText.Content tagName="h3" className="employee__name" value={ personName } />
         <RichText.Content tagName="p" className="employee__title" value={ jobTitle } />
         <p className="employee__email">
           <strong>{ __('E-mail') }:</strong>
