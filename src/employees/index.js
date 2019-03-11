@@ -27,7 +27,7 @@ export const name = 'employees';
 
 export const settings = {
   title: __('Employees'),
-  description: __('Grid with list of employees'),
+  description: __('List your team members'),
   icon: 'businessman',
   attributes: BLOCK_ATTRIBUTES,
 
