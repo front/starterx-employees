@@ -50,7 +50,11 @@
     }
     &__phone, &__email {
       strong {
+        display: inline-block;
         margin-right: 4px;
+      }
+      span {
+        word-break: break-word;
       }
     }
   }
