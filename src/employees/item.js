@@ -6,6 +6,18 @@ const { RichText, BlockControls, MediaUpload } = editor;
 const { Toolbar, IconButton } = components;
 
 
+export function flattenText (arr) {
+  let str = '';
+  for(const token of arr) {
+    if(typeof token === 'string') {
+      str += token;
+      continue;
+    }
+    str += flattenText(token.props.children);
+  }
+  return str;
+}
+
 export function getMediaAttrs (media) {
   if(media && media.data) {
     return Object.keys(media.data).reduce((d, key) => {
@@ -124,6 +136,8 @@ export const settings = {
 
   save ({ attributes }) {
     const { personName, jobTitle, email, phone, image, imageData } = attributes;
+    const [ plainEmail, plainPhone ] = [email, phone].map(i => flattenText(i).replace(/\s/g, ''));
+
     const imgStyle = {
       backgroundImage: image && `url('${image}')`,
     };
@@ -137,11 +151,11 @@ export const settings = {
         <RichText.Content tagName="p" className="employee__title" value={ jobTitle } />
         <p className="employee__email">
           <strong>{ __('E-mail') }:</strong>
-          <RichText.Content tagName="span" value={ email } />
+          <a href={ `mailto:${plainEmail}` }><RichText.Content tagName="span" value={ email } /></a>
         </p>
         <p className="employee__phone">
           <strong>{ __('Phone') }:</strong>
-          <RichText.Content tagName="span" value={ phone } />
+          <a href={ `tel:${plainPhone}` }><RichText.Content tagName="span" value={ phone } /></a>
         </p>
       </div>
     );
