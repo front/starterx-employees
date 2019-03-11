@@ -47,7 +47,7 @@ const BLOCK_ATTRIBUTES = {
     type: 'array',
     source: 'children',
     selector: '.employee__email span',
-    default: 'person@starterx.no',
+    default: 'name@example.com',
   },
   phone: {
     type: 'array',
@@ -118,7 +118,7 @@ export const settings = {
           <p className="employee__email">
             <strong>{ __('E-mail') }:</strong>
             <RichText
-              tagName="span" value={ email } placeholder="person@startertheme.no"
+              tagName="span" value={ email } placeholder="name@example.com"
               onChange={ value => setAttributes({ email: value }) } formattingControls={ [] }
             />
           </p>
