@@ -1,8 +1,12 @@
-
 import { blocks, data, i18n } from 'wp';
+import translations from './translations';
+
 const { registerBlockType } = blocks;
 const { dispatch, select } = data;
-const { __ } = i18n;
+const { __, setLocaleData } = i18n;
+const current_lang = document.documentElement.lang;
+
+setLocaleData(translations[current_lang]);
 
 // Import each block
 import * as block1 from './employees';
